@@ -55,9 +55,9 @@ DP.Walks = {
     ["Default Female"] = { "move_f@multiplayer" },
     ["Default Male"] = { "move_m@multiplayer" },
     ["Drunk"] = { "move_m@drunk@a" },
-    ["Drunk"] = { "move_m@drunk@slightlydrunk" },
-    ["Drunk 2"] = { "move_m@buzzed" },
-    ["Drunk 3"] = { "move_m@drunk@verydrunk" },
+    ["Drunk1"] = { "move_m@drunk@slightlydrunk" },
+    ["Drunk2"] = { "move_m@buzzed" },
+    ["Drunk3"] = { "move_m@drunk@verydrunk" },
     ["Femme"] = { "move_f@femme@" },
     ["Fire"] = { "move_characters@franklin@fire" },
     ["Fire2"] = { "move_characters@michael@fire" },
@@ -108,10 +108,8 @@ DP.Walks = {
     ["Wide"] = { "move_m@bag" },
     ["Chubby Male"] = { "move_chubby" }, --male
     ["Chubby Female"] = { "move_f@chubby@a" }, --female
-	["Depressed"] = { "move_m@depressed@a" },
-	["Depressed 2"] = { "move_m@depressed@b" },
-
-
+    ["Depressed"] = { "move_m@depressed@a" },
+    ["Depressed 2"] = { "move_m@depressed@b" },
 
 
     -- I cant get these to work for some reason, if anyone knows a fix lmk
@@ -120,20 +118,20 @@ DP.Walks = {
 
 
     -- ["Caution"] = {"move_m@caution"}, -- breaks menu
-	--["Chubby"] = {"anim@move_m@chubby@a"},-- breaks menu
+    --["Chubby"] = {"anim@move_m@chubby@a"},-- breaks menu
     -- ["Crazy"] = {"move_m@crazy"},-- breaks menu
     -- ["Joy"] = {"move_m@joy@a"},-- breaks menu
     -- ["Power"] = {"move_m@power"},-- breaks menu
     -- ["Wading"] = {"move_m@wading"} -- breaks menu
-	-- ["Depressed 3"] = { "move_m@depressed@c" }, -- breaks menu
-	-- ["Depressed 4"] = { "move_m@depressed@d" }, -- breaks menu
-	-- ["Caution"] = { "move_m@caution" },-- breaks menu
-	-- ["Crazy"] = { "move_m@crazy" }, -- breaks menu
-	-- ["Joy"] = { "move_m@joy@a" }, -- breaks menu
-	-- ["Power"] = { "move_m@power" }, -- breaks menu
-	-- ["Power Walk"] = { "move_m@powerwalk" }, -- breaks menu
-	-- ["Tired"] = { "move_m@tired" }, -- breaks menu
-	-- --["Wading"] = {"move_m@wading"},-- breaks menu
+    -- ["Depressed 3"] = { "move_m@depressed@c" }, -- breaks menu
+    -- ["Depressed 4"] = { "move_m@depressed@d" }, -- breaks menu
+    -- ["Caution"] = { "move_m@caution" },-- breaks menu
+    -- ["Crazy"] = { "move_m@crazy" }, -- breaks menu
+    -- ["Joy"] = { "move_m@joy@a" }, -- breaks menu
+    -- ["Power"] = { "move_m@power" }, -- breaks menu
+    -- ["Power Walk"] = { "move_m@powerwalk" }, -- breaks menu
+    -- ["Tired"] = { "move_m@tired" }, -- breaks menu
+    -- --["Wading"] = {"move_m@wading"},-- breaks menu
 }
 
 
@@ -423,7 +421,7 @@ DP.Dances = {
     } },
     ["dancesilly8"] = { "anim@amb@casino@mini@dance@dance_solo@female@var_b@", "high_center", "Dance Silly 8", AnimationOptions = {
         EmoteLoop = true
-   } },
+    } },
     ["dancesilly9"] = { "anim@mp_player_intcelebrationfemale@the_woogie", "the_woogie", "Dance Silly 9", AnimationOptions = {
         EmoteLoop = true
     } },
@@ -844,11 +842,10 @@ DP.AnimalEmotes = {
 --- EMOTES, SOME WITH PROPS ---
 
 DP.Emotes = {
-    ["dispenser"] = {"mini@sprunk", "plyr_buy_drink_pt1", "Dispenser", AnimationOptions =
-    {
+    ["dispenser"] = { "mini@sprunk", "plyr_buy_drink_pt1", "Dispenser", AnimationOptions = {
         EmoteMoving = false,
         EmoteLoop = false,
-    }},
+    } },
     ["beast"] = { "anim@mp_fm_event@intro", "beast_transform", "Beast", AnimationOptions = {
         EmoteMoving = true,
         EmoteDuration = 5000,
@@ -1122,11 +1119,10 @@ DP.Emotes = {
         EmoteLoop = true,
         EmoteMoving = true,
     } },
-    ["id"] = {"friends@laf@ig_5", "nephew", "ID", AnimationOptions =
-    {
+    ["id"] = { "friends@laf@ig_5", "nephew", "ID", AnimationOptions = {
         EmoteMoving = true,
         EmoteDuration = 2500
-    }},
+    } },
     ["hug"] = { "mp_ped_interaction", "kisses_guy_a", "Hug" },
     ["hug2"] = { "mp_ped_interaction", "kisses_guy_b", "Hug 2" },
     ["hug3"] = { "mp_ped_interaction", "hugs_guy_a", "Hug 3" },
@@ -1637,6 +1633,14 @@ DP.Emotes = {
         EmoteMoving = true,
         EmoteDuration = 1000,
     } },
+    ["golfswing"] = { "rcmnigel1d", "swing_a_mark", "Golf Swing" },
+    ["eat"] = { "mp_player_inteat@burger", "mp_player_int_eat_burger_fp", "Eat", AnimationOptions = {
+        Prop = "prop_cs_burger_01",
+        PropBone = 18905,
+        PropPlacement = { 0.12, 0.028, 0.001, 10.0, 175.0 },
+        EmoteMoving = true,
+        EmoteLoop = true,
+    } },
     ["reaching"] = { "move_m@intimidation@cop@unarmed", "idle", "Reaching", AnimationOptions = {
         EmoteLoop = true,
         EmoteMoving = true,
@@ -1666,7 +1670,7 @@ DP.Emotes = {
     ["peace4"] = { "anim@mp_player_intincarpeacestd@ds@", "idle_a", "Peace 4", AnimationOptions = {
         EmoteLoop = true,
         EmoteMoving = true,
-     } },
+    } },
     ["peace5"] = { "anim@mp_player_intincarpeacestd@ds@", "idle_a_fp", "Peace 5", AnimationOptions = {
         EmoteLoop = true,
         EmoteMoving = true,
@@ -1915,28 +1919,27 @@ DP.Emotes = {
     ["piss"] = { "missbigscore1switch_trevor_piss", "piss_loop", "Piss (Male)", AnimationOptions = {
         EmoteMoving = false,
         EmoteLoop = true,
-     } },
+    } },
     ["grieve"] = { "anim@miss@low@fin@vagos@", "idle_ped05", "Grieve The Dead", AnimationOptions = {
         EmoteMoving = true,
         EmoteLoop = true,
-     } },
+    } },
     ["respect"] = { "anim@mp_player_intcelebrationmale@respect", "respect", "Respect Male", AnimationOptions = {
         EmoteMoving = true,
         EmoteLoop = false,
-     } },
+    } },
     ["respectf"] = { "anim@mp_player_intcelebrationfemale@respect", "respect", "Respect Female", AnimationOptions = {
         EmoteMoving = true,
         EmoteLoop = false,
     } },
 
 
-
     -----------------------------------------------------------------------------------------------------------
     ------ The male and female 'interaction menu' emotes from GTA Online can be found under the following animation directories:
-	------
-	------ Male: anim@mp_player_intcelebrationmale
-	------
-	------ Female: anim@mp_player_intcelebrationfemale
+    ------
+    ------ Male: anim@mp_player_intcelebrationmale
+    ------
+    ------ Female: anim@mp_player_intcelebrationfemale
 
     -----------------------------------------------------------------------------------------------------------
 
@@ -2227,6 +2230,13 @@ DP.PropEmotes = {
         PropPlacement = { 0.0, 0.0, 0.05, 0.0, 0.0, 0.0 },
         EmoteLoop = true,
         EmoteMoving = true,
+    } },
+    ["drink"] = { "mp_player_intdrink", "loop_bottle", "Drink", AnimationOptions = {
+        Prop = "prop_ld_flow_bottle",
+        PropBone = 18905,
+        PropPlacement = { 0.12, 0.008, 0.03, 240.0, -60.0 },
+        EmoteMoving = true,
+        EmoteLoop = true,
     } },
     ["beer"] = { "amb@world_human_drinking@beer@male@idle_a", "idle_c", "Beer", AnimationOptions = {
         Prop = 'prop_amb_beer_bottle',
