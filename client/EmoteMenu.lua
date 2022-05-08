@@ -57,6 +57,7 @@ local FavEmoteTable = {}
 local KeyEmoteTable = {}
 local DanceTable = {}
 local AnimalTable = {}
+local R18Table = {}
 local PropETable = {}
 local WalkTable = {}
 local FaceTable = {}
@@ -89,6 +90,11 @@ function AddEmoteMenu(menu)
     table.insert(EmoteTable, Config.Languages[lang]['danceemotes'])
     table.insert(EmoteTable, Config.Languages[lang]['danceemotes'])
     table.insert(EmoteTable, Config.Languages[lang]['animalemotes'])
+
+    if Config.R18EmotesEnabled then
+        local r18menu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['animalemotes'], "", "", Menuthing, Menuthing)
+        table.insert(EmoteTable, Config.Languages[lang]['animalemotes'])
+    end
 
     if Config.SharedEmotesEnabled then
       sharemenu = _menuPool:AddSubMenu(submenu, Config.Languages[lang]['shareemotes'], Config.Languages[lang]['shareemotesinfo'], "", Menuthing, Menuthing)
@@ -142,6 +148,15 @@ function AddEmoteMenu(menu)
         table.insert(AnimalTable, a)
     end
 
+    if Config.R18EmotesEnabled then
+        for a, b in pairsByKeys(DP.R18Animations) do
+            x, y, z = table.unpack(b)
+            r18item = NativeUI.CreateItem(z, "/e (" .. a .. ")")
+            r18menu:AddItem(r18item)
+            table.insert(R18Table, a)
+        end
+    end
+
     if Config.SharedEmotesEnabled then
       for a,b in pairsByKeys(DP.Shared) do
         x,y,z,otheremotename = table.unpack(b)
@@ -182,6 +197,10 @@ function AddEmoteMenu(menu)
 
     dancemenu.OnItemSelect = function(sender, item, index)
       EmoteMenuStart(DanceTable[index], "dances")
+    end
+
+    r18menu.OnItemSelect = function(sender, item, index)
+        EmoteMenuStart(R18Table[index], "r18")
     end
 
     animalmenu.OnItemSelect = function(sender, item, index)
@@ -288,7 +307,7 @@ end
 
 function AddInfoMenu(menu)
     if not UpdateAvailable then
-      infomenu = _menuPool:AddSubMenu(menu, Config.Languages[lang]['infoupdate'], "(1.7.3)", "", Menuthing, Menuthing)
+      infomenu = _menuPool:AddSubMenu(menu, Config.Languages[lang]['infoupdate'], "(1.7.4)", "", Menuthing, Menuthing)
     else
       infomenu = _menuPool:AddSubMenu(menu, Config.Languages[lang]['infoupdateav'], Config.Languages[lang]['infoupdateavtext'], "", Menuthing, Menuthing)
     end

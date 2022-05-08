@@ -222,7 +222,7 @@ DP.Shared = {
     ["slapped2"] = { "melee@unarmed@streamed_variations", "victim_takedown_front_backslap", "Slapped 2", "slap2" },
 }
 
-if Config.EnableR18Emote then
+if Config.R18EmotesEnabled then
     DP.R18Animations = {
         ["receiveblowjob"] = { "misscarsteal2pimpsex", "pimpsex_punter", "Receive Blowjob", "Give Blowjob", AnimationOptions = {
             EmoteMoving = false,
