@@ -220,27 +220,32 @@ DP.Shared = {
     } },
     ["slapped"] = { "melee@unarmed@streamed_variations", "victim_takedown_front_slap", "Slapped", "slap" },
     ["slapped2"] = { "melee@unarmed@streamed_variations", "victim_takedown_front_backslap", "Slapped 2", "slap2" },
-    ["receiveblowjob"] = { "misscarsteal2pimpsex", "pimpsex_punter", "Receive Blowjob", "Give Blowjob", AnimationOptions = {
-        EmoteMoving = false,
-        EmoteDuration = 30000,
-        SyncOffsetFront = 0.63
-    } },
-    ["giveblowjob"] = { "misscarsteal2pimpsex", "pimpsex_hooker", "Give Blowjob", "Receive Blowjob", AnimationOptions = {
-        EmoteMoving = false,
-        EmoteDuration = 30000,
-        SyncOffsetFront = 0.63
-    } },
-    ["streetsexmale"] = { "misscarsteal2pimpsex", "shagloop_pimp", "Street Sex Male", "Street Sex Female", AnimationOptions = {
-        EmoteMoving = false,
-        EmoteLoop = true,
-        SyncOffsetFront = 0.50
-    } },
-    ["streetsexfemale"] = { "misscarsteal2pimpsex", "shagloop_hooker", "Street Sex Female", "Street Sex Male", AnimationOptions = {
-        EmoteMoving = false,
-        EmoteLoop = true,
-        SyncOffsetFront = -0.50
-    } },
 }
+
+if Config.EnableR18Emote then
+    DP.R18Animations = {
+        ["receiveblowjob"] = { "misscarsteal2pimpsex", "pimpsex_punter", "Receive Blowjob", "Give Blowjob", AnimationOptions = {
+            EmoteMoving = false,
+            EmoteDuration = 30000,
+            SyncOffsetFront = 0.63
+        } },
+        ["giveblowjob"] = { "misscarsteal2pimpsex", "pimpsex_hooker", "Give Blowjob", "Receive Blowjob", AnimationOptions = {
+            EmoteMoving = false,
+            EmoteDuration = 30000,
+            SyncOffsetFront = 0.63
+        } },
+        ["streetsexmale"] = { "misscarsteal2pimpsex", "shagloop_pimp", "Street Sex Male", "Street Sex Female", AnimationOptions = {
+            EmoteMoving = false,
+            EmoteLoop = true,
+            SyncOffsetFront = 0.50
+        } },
+        ["streetsexfemale"] = { "misscarsteal2pimpsex", "shagloop_hooker", "Street Sex Female", "Street Sex Male", AnimationOptions = {
+            EmoteMoving = false,
+            EmoteLoop = true,
+            SyncOffsetFront = -0.50
+        } },
+    }
+end
 
 
 --- DANCING EMOTES, SOME WITH PROPS ---
